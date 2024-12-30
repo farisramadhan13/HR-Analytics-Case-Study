@@ -8,7 +8,7 @@ rf_model = joblib.load('hr_analytics_rf_model.h5')
 
 scaler = StandardScaler()
 
-st.title("Selamat Datang di Model Prediksi Job Satisfaction")
+st.markdown("<h1 style='text-align: center;'>Selamat Datang di Model Prediksi Job Satisfaction</h1>", unsafe_allow_html=True)
 
 st.header("Masukkan Data")
 
