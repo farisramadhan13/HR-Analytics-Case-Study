@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-rf_model = joblib.load('hr_analytics_model.h5')
+rf_model = joblib.load('hr_analytics_rf_model.h5')
 
 scaler = StandardScaler()
 
