@@ -44,7 +44,6 @@ performance_rating = st.number_input("Performance Rating")
 btn = st.button("predict")
 
 if btn:
-    # Map categorical inputs to one-hot encoded format
     input_data = pd.DataFrame({
         'Age': [age],
         'DistanceFromHome': [distance_from_home],
@@ -86,11 +85,9 @@ if btn:
         'MaritalStatus_Single': [1 if marital_status == 'Single' else 0]
     })
 
-    # Standardize numerical features
     numerical_features = input_data.columns
     processed_input_scaled = scaler.fit_transform(input_data[numerical_features])
 
-    # Predict using the trained model
     prediction = rf_model.predict(processed_input_scaled)
 
     st.subheader(f"Predicted Job Satisfaction: {prediction[0]}")
